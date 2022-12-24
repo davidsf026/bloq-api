@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+
+		<!-- AVISO: A APLICACAO QUANDO FOR PARA OS AMBIENTES DA EMPRESA, -->
+		<!-- DEVERA UTILIZAR UM DATASOURCE CONFIGURADO NO SERVIDOR, COMO A CONFIG ABAIXO. -->
+	
+		<!-- <property name="hibernate.connection.datasource">jboss/jdbc/PROJETO_DS</property> -->
+		
+		
+		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@sefd0101.sefnet.rj:1521:sef01d</property>
+		<property name="hibernate.current_session_context_class">thread</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		<property name="archive.autodetection">class</property>
+		<property name="hibernate.hbm2ddl.auto">validate</property>
+				
+		<property name="hibernate.connection.username">USUARIO</property> <!-- SUBSTITUA PELO USUARIO -->
+		<property name="hibernate.connection.password">SENHA</property> <!-- SUBSTITUA PELA SENHA -->
+		<property name="hibernate.default_schema">SCHEMA DO PROJETO</property> <!-- SUBSTITUA PELO SCHEMA -->
+
+
+		<!-- MAPEAMENTO DAS CLASSES DE ACESSO A DADOS VIA HIBERNATE -->
+		
+		<mapping class="br.gov.rj.fazenda.bloqueio.business.EnderecoBusiness" />
+		
+
+	</session-factory>
+</hibernate-configuration>

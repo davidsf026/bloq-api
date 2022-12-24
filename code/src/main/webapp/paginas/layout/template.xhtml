@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich" xml:lang="pt-br" lang="pt-br"
+    xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<h:head>
+	<meta http-equiv="X-UA-Compatible" content="IE=9,IE=edge" />
+<!-- 	<h:outputScript library="js" name="lib.js"></h:outputScript> -->
+	
+<!-- 	<link rel="stylesheet" href="css/bootstrap.min.css"> -->
+	<h:outputStylesheet library="css" name="/bootstrap.min.css" />
+	
+<!-- <link rel="stylesheet" href="css/busca-pessoas.css?v20191101-1"> -->
+	<h:outputStylesheet library="css" name="busca-pessoas.css" />
+	
+	<title>SUBTIC - Bloqueio</title>
+	<style>
+		img { border: none;}
+	</style>
+	<!-- Style temporário -->
+	<!-- TODO -->
+	<style>
+		.ui-dialog-title{
+		    font-size: 14px !important;
+			font-family:Arial, Helvetica, sans-serif;
+		}
+	</style>
+</h:head>
+
+<h:body>
+	<!-- versao: ${project.version} -->
+	<!-- versao: 1.0.7 -->
+	<h:outputScript library="js" name="jquery-1.9.1.js" />
+	<h:outputScript library="js" name="jquery-ui.min.js" />
+	<h:outputScript library="js" name="jquery.mask.min.js" />
+	
+	
+<div id="principal_head">
+
+	<section class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h:graphicImage library="images" name="img-logo-governo-RJ.png" alt="Governo do Estado do Rio de Janeiro"/>
+				</div>
+				<div class="col-md-6 secretaria-extenso text-right">
+					<a href="http://www.fazenda.rj.gov.br/" class="marinho" target="_blank">Secretaria de Estado de Fazenda do Rio de Janeiro</a>
+				</div>
+			</div>
+		</div>
+		<div class="topo-fazenda">
+			<div class="container">
+<!-- 				<div class="row"> -->
+					<div class="titulo-intranet">
+						<a href="">SISTEMA DE BLOQUEIO DE ACESSOS DE USUÁRIOS</a>
+					</div>
+<!-- 					<div class="col-md-4 text-center"> -->
+						<a href="http://www.fazenda.rj.gov.br/" target="_blank">
+							<svg class="logo-fazenda-svg" height="47.6" viewBox="0 0 374.47964 47.6" width="374.47964" xmlns="http://www.w3.org/2000/svg">
+<!-- 								<desc>FAZENDA</desc> -->
+<!-- 								<path d="M0 0h42.5338v9.06667H12.9334v10.4h27.73373v9.06666H12.9334V47.6H0V0M70.41353 10.26667l-7.46666 18.86666H77.8802zM81.34686 37.8h-21.8672l-3.86613 9.8H41.6802L62.61353 0h15.6l20.93333 47.6H85.21353l-3.86667-9.8"></path> -->
+<!-- 								<path d="M98.29326 39.33333l31.4664-30.26666H100.4266V0h46.33306v8.26613l-31.46693 30.2672h31.46693V47.6h-48.4664v-8.26667M151.373 0h44.46666v9.06667h-31.53333v9.86666h29.93333V27.6h-29.93333v10.93333h31.8V47.6H151.373V0M242.38633 0h12.53333v47.6h-14.06667l-25.93333-33.2-.13333 33.2h-12.53334V0h15l25 33.2.13334-33.2M275.933 38.53333h14.4c4.22133 0 7.344-1.25572 9.36666-3.76666 2.02133-2.51147 3.03333-6.3224 3.03333-11.43387 0-4.62187-1.07733-8.1552-3.23333-10.59947-2.156-2.4448-5.612-3.66666-10.36667-3.66666h-13.2zM262.99832 0h29.668c7.86533 0 13.73333 2.11093 17.6 6.33333 3.86666 4.2224 5.8 10.04427 5.8 17.46667 0 7.3776-1.88934 13.18907-5.66667 17.43333-3.77733 4.24428-9.312 6.36667-16.6 6.36667h-30.80133V0M345.74632 10.26667l-7.46666 18.86666h14.93333zM356.67966 37.8h-21.86667l-3.86666 9.8h-13.93334L337.94632 0h15.6l20.93334 47.6h-13.93334l-3.86666-9.8"></path> -->
+							</svg>
+						</a>
+<!-- 					</div> -->
+<!-- 				</div> -->
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<ul class="menu">
+<!-- 						<li><a href="" class="institucional marinho">Institucional</a></li> -->
+<!-- 						<li><a href="" class="busca-documentos marinho">Busca de documentos</a></li> -->
+					</ul>
+				</div>
+				<div class="col-md-6">
+					<div class="usuario-logado">
+						<div class="informacoes-usuario">
+							<div style="color:white;font-weight: bold" class="saudacao">Olá, <b><h:outputText style="color:white;font-weight: bold" value="#{funcionarioController.nomeUsuarioSSA}" /></b></div>
+							<div class="opcoes-usuario" style="color:white;font-weight: bold">
+								<a href="#" onclick="window.location.href = '../trocaPerfil'" style="color:white;font-weight: bold">Perfil</a> | <a href="#" onclick="window.location.href = '../logout'" style="color:white;font-weight: bold">Sair</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</div>
+
+		<div id="containerSis">
+			<ui:insert name="container"></ui:insert>
+		</div>
+	
+</h:body>
+</html>
+

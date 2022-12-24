@@ -1,0 +1,800 @@
+div:after,
+ol:after,
+form:after,
+ul:after,
+dl:after{
+	content:".";
+	display:block;
+	clear:both;
+	visibility:hidden;
+	height:0;
+	overflow:hidden;
+}
+
+@font-face{
+	font-family:"TitilliumWeb-Regular";
+	src:url(../fonts/titilliumweb-regular.eot);
+	src:url(../fonts/titilliumweb-regular.eot#iefix) format('embedded-opentype'),url(../fonts/titilliumweb-regular.woff) format('woff'),url(../fonts/titilliumweb-regular.ttf) format('truetype'),url(../fonts/titilliumweb-regular.svg) format('svg');
+	font-weight:normal /*400*/;
+	font-style:normal;
+}
+@font-face{
+	font-family:"TitilliumWeb-SemiBold";
+	src:url(../fonts/titilliumweb-semibold.eot);
+	src:url(../fonts/titilliumweb-semibold.eot#iefix) format('embedded-opentype'),url(../fonts/titilliumweb-semibold.woff) format('woff'),url(../fonts/titilliumweb-semibold.ttf) format('truetype'),url(../fonts/titilliumweb-semibold.svg) format('svg');
+	font-weight:normal /*600*/;
+	font-style:normal;
+}
+
+
+
+/* ---------- classes gerais ----------*/
+body{
+	margin: 0;
+	padding: 0;
+	background: #fff url(../images/bg-topo.png) repeat-x;
+	font-size: 13px;
+	line-height: 20px;
+	color: #656565;
+	font-family: "TitilliumWeb-Regular", "Trebuchet MS", Arial;
+}
+a{
+	color: #3ca2d9;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+a:hover{
+	color: #004e8c;
+	text-decoration: none;
+	transition: color 0.3s;
+}
+a.marinho{
+	color: #004e8c;
+}
+a.marinho:hover{
+	color: #1b92d3;
+}
+h2{
+	color: #004e8c;
+	font-family: "TitilliumWeb-SemiBold", "Trebuchet MS", Arial;
+	font-size: 14px;
+	line-height: 16px;
+	margin-top: 0;
+	text-transform: uppercase;
+}
+.curvo{
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.link-direita{
+	font-size: 14px;
+	line-height: 16px;
+	color: #004e8c;
+}
+.link-direita:hover{
+	color: #1b92d3;
+}
+.dados{
+	font-family: "TitilliumWeb-SemiBold", "Trebuchet MS", Arial;
+}
+.positivo{
+	color: #4fba00;
+	margin-right: 7px;
+}
+.negativo{
+	color: #ff0000;
+	margin-right: 7px;
+}
+.hidden{
+	overflow: hidden;
+}
+.botao-simples{
+	color: #fff;
+	background-color: #3ca2d9;
+	border: none;
+	font-size: 14px;
+	line-height: 16px;
+	font-family: "TitilliumWeb-SemiBold", "Trebuchet MS", Arial;
+	transition: background-color .3s;
+	padding: 5px 8px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin-top: 10px;
+}
+.botao-simples:hover{
+	cursor: pointer;
+	background: #004e8c;
+}
+.numero-telefone{
+	background: url('../images/img-ico-telefone.png') no-repeat 15px 5px;
+	font-size: 12px;
+	line-height: 14px;
+	padding-left: 45px;
+	margin-top: 3px;
+    margin-bottom: 4px;
+}
+.numero-telefone b{
+	font-weight: normal;
+	font-family: "TitilliumWeb-SemiBold", "Trebuchet MS", Arial;
+}
+section{
+	clear: both;
+}
+
+
+
+.secretaria-extenso{
+	color: #25527e;
+	line-height: 14px;
+	font-size: 12px;
+	margin-top: 40px;
+	text-transform: uppercase;
+}
+.topo-fazenda{
+	background: rgb(35,81,125);
+	background: linear-gradient(180deg, rgba(35,81,125,1) 0%, rgba(117,145,172,1) 100%);
+	margin-top: 22px;
+	border-bottom: 4px solid #f5f5f5;
+}
+.titulo-intranet{
+	color: #fff;
+	line-height: 30px;
+	font-family: "TitilliumWeb-Regular", "Trebuchet MS", Arial;
+	font-size: 30px;
+	text-transform: uppercase;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+.logo-fazenda-svg {
+    display: block;
+    width: 200px;
+    height: 26px;
+	fill: #fff;
+	margin: 26px auto;
+}
+.bt-acesso-rapido{
+	background: #07689d;
+	border: 2px #fff solid;
+    color: #fff;
+    font-family: "TitilliumWeb-SemiBold", "Trebuchet MS", Arial;
+	padding: 4px 8px 4px;
+	font-size: 14px;
+    line-height: 16px;
+	text-transform: uppercase;
+	white-space: nowrap;
+	margin-top: 25px;
+	transition: background-color 0.3s;
+}
+.bt-acesso-rapido:hover{
+	cursor: pointer;
+	background: #00598a;
+	transition: background-color 0.3s;
+}
+.menu{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.menu li{
+	float: left;
+	text-transform: uppercase;
+	font-family: "TitilliumWeb-SemiBold", "Trebuchet MS", Arial;
+	font-size: 14px;
+	margin: 0 50px 0 0;
+	padding: 21px 0 22px;
+}
+.menu li a.institucional{
+	background: url(../images/img-ico-institucional.png) no-repeat;
+	padding: 3px 0 3px 33px;
+}
+.menu li a.busca-documentos{
+	background: url(../images/img-ico-busca-documentos.png) no-repeat;
+	padding: 3px 0 3px 38px;
+}
+
+
+section.usuario{
+	background: rgb(235,235,235);
+	background: linear-gradient(180deg, rgba(235,235,235,1) 0%, rgba(245,245,245,1) 100%);
+	border-top: 2px solid #e6e6e6;
+	padding: 35px 0 42px;
+}
+.nome-usuario{
+	color: #1b92d3;
+	font-family: "TitilliumWeb-Regular", "Trebuchet MS", Arial;
+	font-size: 24px;
+	line-height: 26px;
+	text-transform: uppercase;
+	background: url(../images/img-detalhe-foto-usuario.png) no-repeat 63px 10px;
+	padding: 0 0 7px 130px;
+}
+.foto-usuario{
+	border: 4px solid #fff;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	float: left;
+	-webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.1);
+	box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.1);
+	margin-right: 18px;
+}
+.bloco-informacoes{
+	float: left;
+	border-left: 1px solid #a5a5a5;
+	margin-top: 15px;
+	padding-left: 9px;
+}
+.bloco-informacoes h2{
+	margin-bottom: 4px;
+}
+.bloco-informacoes p{
+	margin-bottom: 4px;
+	line-height: 16px;
+}
+.bloco-informacoes p:last-child{
+	margin-bottom: 0;
+}
+.bloco-informacoes p span{
+	margin-left: 7px;
+}
+
+
+section.conteudo{
+	background: #eaeaea;
+	padding-top: 33px;
+	padding-bottom: 50px;
+}
+.slider{
+	position: relative;
+}
+.slider .item{
+	min-height: 405px;
+	background-size: cover;
+}
+.slider .assunto{
+	position: absolute;
+	left: 0;
+	top: 0;
+	color: #fff;
+	background-color: #3ca2d9;
+	font-family: "TitilliumWeb-SemiBold", "Trebuchet MS", Arial;
+	font-size: 14px;
+	line-height: 14px;
+	text-transform: uppercase;
+	padding: 5px 7px;
+}
+.slider .barra-azul{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(2, 79, 140, 0.8);
+	width: 100%;
+	padding: 15px 80px 15px 23px;
+}
+.slider .barra-azul p{
+	margin: 0;
+	color: #fff;
+}
+.slider .barra-azul .area{
+	color: #5ab8ea;
+	font-size: 12px;
+	line-height: 14px;
+	text-transform: uppercase;
+}
+.slider .barra-azul .titulo{
+	font-family: "TitilliumWeb-SemiBold", "Trebuchet MS", Arial;
+	font-size: 20px;
+}
+.slider .barra-azul .descricao{
+	font-size: 14px;
+}
+.slider .barra-azul a{
+	color: #fff;
+}
+
+
+.box-comum{
+	background: #fff;
+	border-top: 2px solid #59899e;
+	padding: 13px 15px 14px;
+	margin-bottom: 30px;
+	position: relative;
+}
+.box-comum h2{
+	margin-bottom: 11px;
+	line-height: 19px;
+}
+.box-comum p{
+	margin: 0;
+	color: #979797;
+	line-height: 16px;
+}
+.box-comum .linha-conteudo{
+	clear: both;
+}
+.box-comum .data,
+.box-comum .linha-conteudo .foto{
+	margin-right: 10px;
+}
+.box-comum .data,
+.box-comum .linha-conteudo .foto,
+.box-comum .linha-conteudo .nome-descricao{
+	float: left;
+}
+.box-comum .data{
+	width: 37px;
+}
+.box-comum .data p{
+	text-align: right;
+	color: #999;
+}
+.box-comum .data .dia{
+	font-size: 24px;
+	line-height: 24px;
+}
+.box-comum .data .mes{
+	font-size: 21px;
+	line-height: 18px;
+	padding-bottom: 2px;
+}
+.box-comum .data .hora,
+.box-comum .data .ano{
+	font-size: 12px;
+	line-height: 14px;
+	font-family: "TitilliumWeb-SemiBold", "Trebuchet MS", Arial;
+	color: #1b92d3;
+}
+.box-comum .data .hora.externo{
+	color: #2cbe3c;
+}
+.box-comum .data img{
+	float: right;
+}
+.box-comum .linha-conteudo .foto{
+	width: 100px;
+	position: relative;
+}
+.box-comum .linha-conteudo .foto img{
+	display: block;
+	margin-bottom: 15px;
+}
+.box-comum .linha-conteudo .foto img.last{
+	margin-bottom: 0;
+}
+.box-comum .linha-conteudo .foto .assunto{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #3ca2d9;
+	color: #fff;
+	font-family: "TitilliumWeb-SemiBold", "Trebuchet MS", Arial;
+	font-size: 10px;
+	line-height: 10px;
+	text-transform: uppercase;
+	padding: 3px 4px 4px;
+}
+.box-comum .linha-conteudo .foto .assunto.externo{
+	background-color: #2cbe3c;
+}
+.box-comum .linha-conteudo .nome-descricao{
+	width: 173px;
+}
+.box-comum .linha-conteudo .nome-descricao .titulo{
+	font-size: 14px;
+}
+.box-comum .linha-conteudo .nome-descricao .titulo.externo a{
+	color: #2cbe3c;
+}
+.box-comum .linha-conteudo .nome-descricao .titulo.externo a:hover{
+	color: #059214;
+}
+.box-comum .slider-campanhas{
+	width: 732px;
+	overflow: hidden;
+}
+.box-comum .slider-campanhas .item{
+	float: left;
+	margin-right: 12px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.box-comum .slider-campanhas .item a{
+	width: 232px;
+	height: 116px;
+	display: block;
+}
+.box-comum .acontece .detalhes-edicao,
+.box-comum .acontece .imagem-edicao{
+	float: left;
+}
+.box-comum .acontece .detalhes-edicao{
+	width: 126px;
+	margin-right: 12px;
+}
+.box-comum .acontece .detalhes-edicao p{
+	text-align: right;
+}
+.box-comum .acontece .detalhes-edicao .edicao{
+	font-size: 24px;
+	line-height: 24px;
+}
+.box-comum .acontece .detalhes-edicao .mes{
+	font-size: 18px;
+	line-height: 21px;
+	font-style: italic;
+}
+.box-comum .acontece .detalhes-edicao .quant-noticias{
+	font-size: 14px;
+	line-height: 18px;
+	font-family: "TitilliumWeb-SemiBold", "Trebuchet MS", Arial;;
+	color: #1b92d3;
+}
+.box-comum .clipping{
+	width: 342px;
+	overflow: hidden;
+}
+.box-comum .clipping img{
+	float: right;
+	margin-left: 10px;
+}
+.box-comum .clipping .data{
+	float: left;
+	width: 102px;
+	margin: 15px 12px 10px 0;
+}
+.box-comum .menu-atendimento-sutic{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+/*.box-comum .menu-atendimento-sutic input{
+	-webkit-appearance: button;
+	-moz-appearance: button;
+	-ms-appearance: button;
+	-o-appearance: button;
+	appearance: button;
+}
+.box-comum .menu-atendimento-sutic input:checkeid{
+	background-color: #3ca2d9;
+}*/
+.box-comum .menu-atendimento-sutic .menu-sutic{
+	background-color: #fff;
+	color: #606060;
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 13px;
+	font-family: "TitilliumWeb-SemiBold", "Trebuchet MS", Arial;
+	float: left;
+	padding: 8px 15px 9px;
+	display: block;
+}
+.box-comum .menu-atendimento-sutic .menu-sutic span{
+	color: #73bbff;
+	float: left;
+	font-size: 24px;
+	margin-right: 10px;
+	display: block;
+	padding: 4px 0;
+}
+.box-comum .menu-atendimento-sutic .menu-sutic:hover{
+	background-color: #3ca2d9;
+	color: #fff;
+}
+.box-comum .menu-atendimento-sutic .menu-sutic:hover span{
+	color: #fff;
+}
+.box-comum.atendimento-sutic{
+	width: 100%;
+	overflow: hidden;
+}
+.mascara-col-md-8{
+	width: 720px;
+	overflow: hidden;
+}
+.mascara-col-md-12{
+	width: 1110px;
+	overflow: hidden;
+}
+.box-comum.atendimento-sutic .miolo-atendimento{
+	border-top: 1px solid #ccc;
+	padding-top: 17px;
+	width: 1125px;
+}
+.box-comum.atendimento-sutic .miolo-atendimento .card-atendimento{
+	background-color: #f2f2f2;
+	float: left;
+	margin-right: 12px;
+	width: 175px;
+	padding: 9px 12px;
+	position: relative;
+	min-height: 180px;
+}
+.box-comum.atendimento-sutic .miolo-atendimento .card-atendimento .assunto{
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: #3ca2d9;
+	color: #fff;
+	font-family: "TitilliumWeb-SemiBold", "Trebuchet MS", Arial;
+	font-size: 12px;
+	line-height: 12px;
+	padding: 3px 4px;
+}
+.box-comum.atendimento-sutic .miolo-atendimento .card-atendimento .data-chamado{
+	font-size: 10px;
+}
+.box-comum.atendimento-sutic .miolo-atendimento .card-atendimento .numero-chamado{
+	font-size: 24px;
+	line-height: 20px;
+	margin: 2px 0 4px;
+}
+.box-comum.atendimento-sutic .miolo-atendimento .card-atendimento .titulo-chamado{
+	line-height: 15px;
+}
+.box-comum.atendimento-sutic .miolo-atendimento .card-atendimento .titulo-chamado a{
+	line-height: 15px;
+	font-family: "TitilliumWeb-SemiBold", "Trebuchet MS", Arial;
+}
+.box-comum.atendimento-sutic .miolo-atendimento .card-atendimento .status-chamado{
+	color: #fff;
+	font-family: "TitilliumWeb-SemiBold", "Trebuchet MS", Arial;
+	font-size: 12px;
+	line-height: 12px;
+	padding: 3px 4px;
+	background-color: #949494;
+	width: auto;
+	text-transform: uppercase;
+	display: inline-block;
+	margin: 5px 0 8px;
+}
+.box-comum.atendimento-sutic .miolo-atendimento .card-atendimento .status-chamado.iniciado{
+	background-color: #8b34db;
+}
+.box-comum.atendimento-sutic .miolo-atendimento .card-atendimento .status-chamado.em-analise{
+	background-color: #db7734;
+}
+.box-comum.atendimento-sutic .miolo-atendimento .card-atendimento .atribuicao-chamado{
+	font-size: 12px;
+	line-height: 14px;
+	width: 80%;
+}
+.box-comum .banners-servicos{
+	width: 342px;
+}
+.box-comum .banners-servicos a{
+	width: 159px;
+	float: left;
+	margin: 0 12px 12px 0;
+}
+.box-comum .banners-servicos a.last{
+	margin-bottom: 0;
+}
+.box-comum .banners-servicos a img{
+	display: block;
+}
+.box-comum .mascara-coluna-aniversariantes,
+.box-comum .mascara-coluna-novos-servidores{
+	overflow: hidden;
+	float: left;
+}
+.box-comum .mascara-coluna-aniversariantes{
+	width: 472px;
+	margin-right: 24px;
+}
+.box-comum .mascara-coluna-novos-servidores{
+	width: 224px;
+}
+.box-comum .coluna-aniversariantes{
+	width: 484px;
+}
+.box-comum .coluna-novos-servidores{
+	width: 236px;
+}
+.box-comum .coluna-aniversariantes .aniversariante,
+.box-comum .coluna-novos-servidores .novo-servidor{
+	float: left;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding: 10px;
+	margin: 15px 12px 0 0;
+	position: relative;
+}
+.box-comum .coluna-aniversariantes .aniversariante .area,
+.box-comum .coluna-novos-servidores .novo-servidor .area{
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: #3ca2d9;
+	color: #fff;
+	font-family: "TitilliumWeb-SemiBold", "Trebuchet MS", Arial;
+	font-size: 12px;
+	line-height: 12px;
+	padding: 3px 4px;
+}
+.box-comum .coluna-aniversariantes .aniversariante .foto-usuario-mini,
+.box-comum .coluna-novos-servidores .novo-servidor .foto-usuario-mini{
+	width: 70px;
+	height: 70px;
+	margin: 15px auto 7px;
+	border: 3px solid #fff;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	-webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.1);
+	box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.1);
+	background-position: center;
+	background-size: cover;
+}
+.box-comum .coluna-aniversariantes .aniversariante{
+	width: 109px;
+	background: rgb(243,243,243);
+	background: linear-gradient(180deg, rgba(243,243,243,1) 0%, rgba(237,237,237,1) 100%);
+}
+.box-comum .coluna-novos-servidores .novo-servidor{
+	width: 106px;
+	border: 1px solid #e0e0e0;
+	background: #fff;
+}
+.box-comum h3{
+	margin: 0;
+	padding: 0;
+	color: #979797;
+	font-weight: normal;
+	font-size: 12px;
+	font-family: "TitilliumWeb-SemiBold", "Trebuchet MS", Arial;
+	text-transform: uppercase;
+	border-bottom: 1px solid #ccc;
+}
+.box-comum.relacionamento .data-servidor{
+	font-size: 10px;
+	line-height: 12px;
+	color: #787878;
+	margin: 3px 0;
+}
+.box-comum.relacionamento .nome-servidor,
+.box-comum.relacionamento .nome-servidor a{
+	font-size: 12px;
+	line-height: 14px;
+	color: #004e8c;
+}
+.box-comum.relacionamento .btn-mini{
+	background-color: #3ca2d9;
+	color: #fff;
+	font-family: "TitilliumWeb-SemiBold", "Trebuchet MS", Arial;
+	font-size: 10px;
+	line-height: 10px;
+	text-transform: uppercase;
+	padding: 3px 4px 4px;
+	margin-top: 6px;
+	float: right;
+}
+.box-comum.redes-sociais .mascara-redes-sociais{
+	width: 720px;
+	height: 537px;
+	overflow: auto;
+}
+.box-comum.redes-sociais .twitter,
+.box-comum.redes-sociais .instagram{
+	float: left;
+	width: 335px;
+}
+.box-comum.redes-sociais .twitter{
+	margin-right: 20px;
+}
+.box-comum .informativo{
+	position: relative;
+	min-height: 218px;
+	background-size: cover;
+	background-position-y: top;
+}
+.box-comum .informativo .barra-azul{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(2, 79, 140, 0.8);
+	width: 100%;
+	padding: 15px 15px 15px 20px;
+}
+.box-comum .informativo .assunto{
+	position: absolute;
+	right: 0;
+	top: 0;
+	color: #fff;
+	background-color: #3ca2d9;
+	font-family: "TitilliumWeb-SemiBold", "Trebuchet MS", Arial;
+	font-size: 12px;
+	line-height: 14px;
+	text-transform: uppercase;
+	padding: 5px 7px;
+}
+.box-comum .informativo .barra-azul p{
+	margin: 0;
+	color: #fff;
+}
+.box-comum .informativo .barra-azul .area{
+	color: #5ab8ea;
+	font-size: 12px;
+	line-height: 14px;
+	text-transform: uppercase;
+}
+.box-comum .informativo .barra-azul .titulo{
+	font-family: "TitilliumWeb-SemiBold", "Trebuchet MS", Arial;
+	font-size: 18px;
+	line-height: 21px;
+}
+.box-comum .informativo .barra-azul .descricao{
+	font-size: 12px;
+	line-height: 14px;
+}
+.box-comum .informativo .barra-azul a{
+	color: #fff;
+}
+
+
+/* ----- Twitter ----- */
+.twitter-tweet.twitter-tweet-rendered{
+	/*height: 513px !important;*/
+	margin-bottom: 0 !important;
+	/*background-color: yellow;*/
+}
+
+
+/* ----- instagram ----- */
+.instagram-media.instagram-media-rendered{
+	/*height: 513px;
+	overflow: hidden !important;*/
+	margin-top: 10px !important;
+	margin-bottom: 0 !important;
+	-webkit-border-radius: 5px !important;
+	-moz-border-radius: 5px !important;
+	border-radius: 5px !important;
+}
+
+
+
+/* ---------- rodape ---------- */
+section.rodape{
+	background-color: #eaeaea;
+}
+.img-rodape img{
+	text-align: center;
+	display: block;
+	width: 100%;
+}
+.bg-rodape-copa{
+	background: url(../images/img-bg-rodape.png) repeat-x;
+	min-height: 135px;
+    width: 100%;
+}
+.bg-rodape-copa .info{
+	padding: 23px 0 0;
+    text-align: center;
+    color: #d1d5df;
+	font-size: 11px;
+	margin: 0;
+}
+.bg-rodape-copa .info b{
+	display: block;
+    text-transform: uppercase;
+}
+.direitos {
+    font-size: 11px;
+    color: #a3aac0;
+    float: left;
+	text-align: left;
+	margin-top: -20px !important;
+}
+.tecnologia {
+    font-size: 11px;
+    color: #a3aac0;
+    float: right;
+	text-align: right;
+	margin-bottom: 0;
+	margin-top: -20px !important;
+}

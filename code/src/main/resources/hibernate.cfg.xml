@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+
+		<!-- DATASOURCE -->
+		<property name="hibernate.connection.datasource">jboss/datasources/bloqueioDS</property>
+		<property name="hibernate.current_session_context_class">thread</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		<property name="hibernate.default_schema">AUTO</property>
+		<property name="show_sql">true</property>
+		<property name="format_sql">true</property>
+		<property name="archive.autodetection">class</property>
+<!-- 		<property name="hibernate.hbm2ddl.auto">validate</property> -->
+
+		<!-- Cache properties -->
+		<property name="hibernate.cache.use_second_level_cache">false</property>
+		<property name="hibernate.cache.use_query_cache">false</property>
+		<property name="hibernate.cache.infinispan.statistics">false</property>
+		<property name="hibernate.cache.region.factory_class">org.hibernate.cache.infinispan.InfinispanRegionFactory</property>
+
+		<!-- MAPEAMENTO DAS CLASSES DE ACESSO A DADOS VIA HIBERNATE -->
+
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.AcessoServicoEletronico" /> -->
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.AcessoTemporario" /> -->
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.AreaResponsavel" /> -->
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.AvaliacaoServico" /> -->
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.ConfigAreaAtendPresencial" /> -->
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.ConfigAssuntoFormaAtendimento" /> -->
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.ContribuinteICMS" /> -->
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.DadoAcesso" /> -->
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.DetalheAssunto" /> -->
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.DisponibilidadeAcessoHist" /> -->
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.Funcionalidade" /> -->
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.Funcionario" /> -->
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.InformacaoServico" /> -->
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.LogAcesso" /> -->
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.Menu" /> -->
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.Pais" /> -->
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.Parametro" /> -->
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.PerguntaFrequente" /> -->
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.SecaoInformacaoServico" /> -->
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.TagAssunto" /> -->
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.TermoNaoEncontradoBusca" /> -->
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.TipoAtendimento" /> -->
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.ServicoDestaquePerfil" /> -->
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.Usuario" /> -->
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.UsuarioDetalhe" /> -->
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.UsuarioMensagem" /> -->
+		
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.Preposto" /> -->
+<!-- 		<mapping class="br.gov.rj.fazenda.suaf.adservice.entity.Prefeitura" /> -->
+
+		
+	</session-factory>
+</hibernate-configuration>

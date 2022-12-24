@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+	template="/paginas/layout/template.xhtml"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+	
+	<ui:define name="container"> 
+		
+<!-- 		<h:outputScript library="js" name="inicio.js" /> -->
+
+<!-- 	<h:form name="formularioBuscarFuncionario" id="idFormularioBuscarFuncionario" method="post" prependId="false"> -->
+	
+		<section class="conteudo-internas">
+			<div class="miolo">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="box-comum filtro-cards">
+								<h2>Digite o login:</h2>
+								<div class="filtro-pai">
+									<h:form class="form-inline">
+					           		<div class="form-group">
+
+												<p:inputText id="textBusca" value="#{funcionarioController.login}" styleClass="campo-texto busca-generica" />
+																			<p:focus for="textBusca"/>
+	                                    </div>
+	                                    
+										<div class="form-group">
+											<p:commandButton styleClass="botao-pesquisar" ajax="false" value="Pesquisar" action="#{funcionarioController.buscarFuncionarioAD}"/>
+											<!-- update="agendamentos" immediate="true"  onstart="$('#loading').show();" oncomplete="$('#loading').hide();PF('dlgBloquear').hide();" onerror="$('#loading').hide()" -->
+										</div>
+									</h:form>
+								</div>
+								<div>*Os usuários não serão bloqueados nos sistemas SEI, UPO e Portal do Servidor.</div>
+							</div>
+									<h:form>
+										<p:dialog visible="#{not empty funcionarioController.funcionario}" id="dlgBloquear" header="Deseja bloquear usuário #{funcionarioController.funcionario.nome}?" resizable="false" closable="false" widgetVar="dlgBloquear" modal="true" closeOnEscape="true" draggable="false">
+								        	<h:panelGroup id="modalBloquear">
+<!--  												<div class="ui-dialog-buttonpane ui-dialog-footer ui-widget-content ui-helper-clearfix"> -->
+<div align="center">
+													<h:commandButton styleClass="btn btn-lg btn-primary" ajax="true" oncomplete="PF('dlgBloquear').hide()" value="Não" action="#{funcionarioController.limpar()}"/><h:graphicImage library="images" name="space.png"/><h:commandButton styleClass="btn btn-lg btn-primary" ajax="true" onclick="PF('dlgAguarde').show()" oncomplete="PF('dlgAguarde').show();PF('dlgBloquear').hide();"  value="Sim" action="#{funcionarioController.realizarBloqueio()}" />
+
+												</div>
+											</h:panelGroup>
+								        </p:dialog>
+								        <p:dialog header="Aguarde alguns instantes..." closeOnEscape="false" closable="false" resizable="false" widgetVar="dlgAguarde" modal="true" draggable="false">
+								        	<div align="center">
+								        		
+											</div>
+										</p:dialog>
+										
+										<p:dialog visible="#{funcionarioController.flagUltimoResultadoGeralSucesso == false}" header="Não foi possível bloquear todas as contas do usuário." closeOnEscape="false" closable="false" resizable="false" widgetVar="dlgResultadoNegativo" modal="true" draggable="false">
+											<div align="center">Foi encaminhado um e-mail com o detalhamento das operações para o usuário solicitante.</div>
+								        	
+								        	<div align="center" style="font-family: Arial;font-size: 16px"><h:graphicImage library="images" name="space.png"/></div>
+								        	<div align="center" style="font-family: Arial;font-size: 16px">
+								        		<h:graphicImage library="images" width="80px" height="80px" name="sign-error-icon_34362.png"/>
+								        	</div>
+								        	<div align="center" style="font-family: Arial;font-size: 16px"></div>
+								        	<h:graphicImage library="images" name="space.png"/>
+								        	
+								        	<div align="center">
+								        			<h:commandButton styleClass="btn btn-lg btn-primary" ajax="true" oncomplete="PF('dlgResultadoNegativo').hide()" value="Ok" action="#{funcionarioController.limparFlagUltimoResultadoGeralSucesso()}" />
+											</div>
+										</p:dialog>
+										
+										<p:dialog visible="#{funcionarioController.flagUltimoResultadoGeralSucesso == true}" header="Todas as contas do usuário foram bloqueadas com sucesso." closeOnEscape="false" closable="false" resizable="false" widgetVar="dlgResultadoPositivo" modal="true" draggable="false">
+								        	<div align="center">Foi encaminhado um e-mail com o detalhamento das operações para o usuário solicitante.</div>
+								        	<div align="center" style="font-family: Arial;font-size: 16px"></div>
+								        	<h:graphicImage library="images" name="space.png"/>
+								        	<div align="center">
+								        			<h:commandButton styleClass="btn btn-lg btn-primary" ajax="true" oncomplete="PF('dlgResultadoPositivo').hide()" value="Ok" action="#{funcionarioController.limparFlagUltimoResultadoGeralSucesso()}"/>
+											</div>
+										</p:dialog>
+										<p:dialog visible="#{not empty funcionarioController.mensagemDialog}" header="#{funcionarioController.mensagemDialog}" closeOnEscape="true" closable="false" resizable="false" widgetVar="dlgMensagem" modal="true" draggable="false">
+								        	<div align="center">
+								        			<h:commandButton styleClass="btn btn-lg btn-primary" ajax="true" oncomplete="PF('dlgMensagemDialog').hide()" value="Ok" action="#{funcionarioController.limparMensagemDialog()}" />
+											</div>
+										</p:dialog>
+									</h:form>		
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</ui:define>
+	
+	
+</ui:composition>

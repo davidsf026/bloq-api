@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+	
+	<ui:insert name="body" />
+	
+	<section class="conteudo-internas">
+		<div class="linha-titulo">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1>Busca por pessoas</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="miolo">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="box-comum filtro-cards">
+							<h2>Filtre sua pesquisa:</h2>
+							<div class="filtro-pai">
+								<form action="" class="form-inline">
+                                    <select name="" id="" class="form-control busca-pessoas">
+                                        <option value=""></option>
+                                        <option value="">Nome</option>
+                                        <option value="">E-mail</option>
+                                        <option value="">Telefone</option>
+                                        <option value="">Celular</option>
+                                        <option value="">Órgão</option>
+                                        <option value="">Cargo</option>
+                                        <option value="">Função</option>
+                                    </select>
+									<div class="form-group">
+										<input type="text" class="campo-texto busca-generica"/>
+                                    </div>
+                                    <select name="" id="" class="form-control busca-pessoas">
+                                        <option value=""></option>
+                                        <option value="">Data de nascimento</option>
+                                        <option value="">Data de início SEFAZ</option>
+                                    </select>
+									<div class="form-group campo-datas">
+										<div class="titulo-campo-data">Período</div>
+										<div class="fundo-campo-calendario">
+											<label for="data-inicio">de: </label>
+											<input type="date" id="data-inicio" class="campo-calendario"/>
+										</div>
+										<div class="fundo-campo-calendario">
+											<label for="data-fim">até: </label>
+											<input type="date" id="data-fim" class="campo-calendario"/>
+										</div>
+										<div class="checkbox-eventos-finalizados">
+											<input type="checkbox" name="eventos-finalizados" id="eventos-finalizados"> Incluir servidores inativos/desvincula</input>
+											<label for="eventos-finalizados" class="checker"></label>
+										</div>
+									</div>
+									<div class="form-group">
+										<input type="button" value="Pesquisar" class="botao-pesquisar"/>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 text-right"><a href="" class="btn-grande btn-incluir">Incluir</a></div>
+						</div>
+						<div class="box-comum filtro-cards">
+							<div class="resultados-busca margem-menor">
+								<div class="row">
+									<div class="col-md-12"><p class="quant-resultados"><b>3</b> Resultados para sua pesquisa:</p></div>
+								</div>
+								
+								<div class="resultados-cards">
+
+									<!--relacionamento-->
+									<div class="card-resultado com-imagem servidor">
+										<div class="assunto">SUCIEF</div>
+										<div class="imagem-resultado-pessoa" style="background-image: url('images/img-foto-servidor-1.jpg')"></div>
+										<p class="data-e-hora">15356254</p>
+										<p class="titulo-resultado">
+											<a href="">Antonio Carlos Chagas Júnior dos Santos Chagas Júnior dos Santos</a>
+										</p>
+										<p class="descricao-resultado cargo">Auditor Fiscal da Receita Estadual Fiscalg da Receita Estadual</p>
+										<p class="descricao-resultado funcao">Auditor Fiscal Subchefe da Receitag Estadual Fiscal Subchefe da Receita Estadual</p>
+										<p class="aniversario">Aniversário:<br/><b>15/10</b></p>
+										<a href="" class="botao-card">Visualizar</a>
+									</div>
+									<div class="card-resultado com-imagem servidor">
+										<div class="assunto">ADM. DIRETA</div>
+										<div class="imagem-resultado-pessoa" style="background-image: url('images/img-foto-servidor-2.jpg')"></div>
+										<p class="data-e-hora">48494986</p>
+										<p class="titulo-resultado">
+											<a href="">Edmilson Brito Bezerra</a>
+										</p>
+										<p class="descricao-resultado cargo">Auditor Fiscal da Receita Estadual</p>
+										<p class="descricao-resultado funcao">Auditor Fiscal Subchefe</p>
+										<p class="aniversario">Aniversário:<br/><b>15/10</b></p>
+										<a href="" class="botao-card">Visualizar</a>
+									</div>
+									<div class="card-resultado com-imagem servidor">
+										<div class="assunto">ADM. DIRETA</div>
+										<div class="imagem-resultado-pessoa" style="background-image: url('images/img-foto-servidor-3.jpg')"></div>
+										<p class="data-e-hora">14564665</p>
+										<p class="titulo-resultado">
+											<a href="">Enilda Guedes Sobral</a>
+										</p>
+										<p class="descricao-resultado cargo">Auditor Fiscal da Receita Estadual</p>
+										<p class="descricao-resultado funcao">Auditor Fiscal Subchefe</p>
+										<p class="aniversario">Aniversário:<br/><b>15/10</b></p>
+										<a href="" class="botao-card">Visualizar</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+			
+
+</ui:composition>
