@@ -1,4 +1,4 @@
-FROM registry.redhat.io/jboss-eap-7/eap74-openjdk11-openshift-rhel8:latest
+FROM image-registry.openshift-image-registry.svc:5000/openshift/jboss-eap74-openjdk11-openshift
 ENV CONFIG_EXTERNAL_FILE_PATH=/tmp
 USER 0
 RUN mkdir -pv /var/log/jboss_log/SUBTIC-Bloq/ && \
