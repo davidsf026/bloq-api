@@ -1,2 +1,2 @@
-# sefaz-rj-bloq
-Prova de Conceito de migração para cloud native
+# SEFAZ-RJ - BLOQ API
+Prova de conceito de migração para Cloud Native.
