@@ -1,2 +1,2 @@
 # SEFAZ-RJ - BLOQ API
-Prova de conceito de migração para Cloud Native.
+Prova de conceito de migração para Cloud Native (Infraestrutura e Pipelines).
